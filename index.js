@@ -13,9 +13,12 @@ I need this code, just don't know where, perhaps should make some middleware, do
 Go code!
 */
 
+require('dotenv').config();//reads .env and merges it into process.env
+
+
 const server = require('./api/server');
 
 const port = process.env.PORT || 4000 //making the port dynamic for heroku deployement
 server.listen(port, () => {
-  console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
+  console.log(`\n*** Server Running on http://localhost:4000 ***\n`);
 });
