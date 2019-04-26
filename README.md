@@ -26,14 +26,14 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
-Server, routers, endpoints and middleware
+Server, routers, endpoints and middleware.
 
 - [ ] Describe Middleware?
 
 A middleware is a piece of software used in express applications. As the name suggests, it works as a middleman between the API requests from clients and the endpoints on the server. It can be used to add extra filters or conditions on the API requests before they reach the end points.
 
 - [ ] Describe a Resource?
-
+ 
 In REST, the resource typically refers to some object or set of objects that are exposed at an API endpoint. It is the response that we get from the server as an API response.
 
 - [ ] What can the API return to help clients know if a request was successful?
