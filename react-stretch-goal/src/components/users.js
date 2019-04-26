@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
  
 class Projects extends React.Component {
     state = {
-        projects: [],
+        projects: {},
         name: '',
         id: '',
         description: ''
@@ -68,14 +68,17 @@ class Projects extends React.Component {
         console.log(e.target.id)
     
         axios
-          .delete(`https://users-posts-app.herokuapp.com/api/users/${e.target.id}`)
+          .delete(`http://localhost:4000/api/projects/${this.state.id}`)
           .then(res => {
             console.log(res)
-            this.getData();
+            // this.getData();
+            this.setState({
+              projects: {}
+            })
           })
           .catch(err => {
             console.log(err)
-            this.getData();
+            // this.getData();
           })
       }
     
@@ -130,8 +133,8 @@ class Projects extends React.Component {
                         <h2>{this.state.projects.name}</h2>
                         <h2>{this.state.projects.description}</h2>
                         <h2>{this.state.projects.completed}</h2>
-                        {/* <button onClick={this.deletePost} id={project.id}>Delete</button>
-                        <button onClick={this.updatePost} id={project.id}>Update</button> */}
+                        <button onClick={this.deletePost} id={this.state.projects.id}>Delete</button>
+                        <button onClick={this.updatePost} id={this.state.projects.id}>Update</button>
                     </div>
                 
             </div>
